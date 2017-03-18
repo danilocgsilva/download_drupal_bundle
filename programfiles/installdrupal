@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    echo Please, provides the first argument to be the drupal directory name.
+    exit
+fi
+
+packfile=drupal-8.2.7.tar.gz
+basepackname=$(basename $packfile .tar.gz)
+
+wget https://ftp.drupal.org/files/projects/$packfile
+tar xvzf $packfile
+mv $basepackname $1
+rm $packfile
