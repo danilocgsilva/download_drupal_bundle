@@ -24,5 +24,6 @@ basepackname=$(basename $packfile .tar.gz)
 
 uget https://ftp.drupal.org/files/projects/$packfile
 tar xvzf $packfile
+cp $basepackname/sites/default/default.settings.php $basepackname/sites/default/settings.php
 mv $basepackname $1
 rm $packfile
