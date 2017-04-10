@@ -1,5 +1,7 @@
 #!/bin/bash
 
+downloaddrupal_version=1
+
 # Input check
 if [ -z $1 ]; then
     echo Please, provides the first argument to be the drupal directory name.
