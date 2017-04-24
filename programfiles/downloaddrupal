@@ -16,13 +16,13 @@ downloaddrupal_download() {
 	fi
 
 	# Actions
-	default_last_drupal_version=8.3.1
+	last_drupal_version=8.3.1
 
 	if ! [ -z $2 ]; then
-		default_last_drupal_version=$2
+		last_drupal_version=$2
 	fi
 
-	packfile=drupal-8.3.1.tar.gz
+	packfile=drupal-$last_drupal_version.tar.gz
 	basepackname=$(basename $packfile .tar.gz)
 
 	udownload https://ftp.drupal.org/files/projects/$packfile
