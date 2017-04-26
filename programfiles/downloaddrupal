@@ -1,11 +1,11 @@
 #!/bin/bash
 
-downloaddrupal_version=5
+downloaddrupal_version=6
 downloaddrupal_uri=https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal
 
 downloaddrupal_download() {
 	# Dependency check
-	if ! [ $(which udownload) ] ; then
+	if ! which udownload > /dev/null 2>&1 ; then
 		echo The downloaddrupal utility needs the udownload utility. Download it from https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal and puts in the /usr/local/bin/.
 		exit
 	fi
