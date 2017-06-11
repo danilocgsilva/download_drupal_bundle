@@ -1,6 +1,6 @@
 #!/bin/bash
 
-downloaddrupal_version=6
+downloaddrupal_version=7
 downloaddrupal_uri=https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal
 
 downloaddrupal_download() {
@@ -17,7 +17,7 @@ downloaddrupal_download() {
 	fi
 
 	# Actions
-	last_drupal_version=8.3.1
+	last_drupal_version=8.3.3
 
 	if ! [ -z $2 ]; then
 		last_drupal_version=$2
