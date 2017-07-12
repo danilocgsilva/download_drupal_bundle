@@ -1,7 +1,7 @@
 #!/bin/bash
 
 downloaddrupal_version=8
-downloaddrupal_uri=https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal
+downloaddrupal_uri=https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/src/downloaddrupal
 
 downloaddrupal_download() {
 	# Dependency check
