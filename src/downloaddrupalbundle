@@ -6,8 +6,14 @@ downloaddrupal_uri=https://raw.githubusercontent.com/danilocgsilva/download_drup
 downloaddrupal_download() {
 	# Dependency check
 	if ! which udownload > /dev/null 2>&1 ; then
-		echo The downloaddrupal utility needs the udownload utility. Download it from https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal and puts in the /usr/local/bin/.
-		exit
+		if ! which installfromalias > /dev/null 2>&1 ; then
+			echo The downloaddrupalbundle utility needs the udownload utility or the install from alias utility.
+			echo For udownload, downloads from https://raw.githubusercontent.com/danilocgsilva/download_drupal/master/programfiles/downloaddrupal and puts in the /usr/local/bin/.
+			echo For installfromalias, downloads from https://raw.githubusercontent.com/danilocgsilva/install_from_alias/master/src/installfromalias and puts in the /usr/local/bin/.
+			exit
+		else
+			installfromalias programfiles universal_download udownload
+		fi
 	fi
 
 	# Input check
